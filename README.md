@@ -29,6 +29,8 @@ VERSION 5.00s
 * Rework of MND file saving and loading. Not backwards compatible.
 * Rework of all modulation code. Sample Interpolation added.
 * Distortion pedals reworked. Are now OD and Distortion.
+* Control focus indicators added.
+* Color rework, all ON items are Green.
 * Rebranded as Mini D, all Mako references removed.
 
 NOTE:<br/>
