@@ -1,5 +1,5 @@
 # Rosbone Mini Distortion
-* JUCE VST guitar processor.
+* JUCE 8 VST guitar processor.
 * Tested on Windows only.
 * Written in Visual C++ 2022.
 * Rosbone DSP
