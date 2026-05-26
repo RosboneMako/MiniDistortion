@@ -2,10 +2,12 @@
 * JUCE VST guitar processor.
 * Tested on Windows only.
 * Written in Visual C++ 2022.
-* Version: 4.20s
-* Posted: Feb 5, 2026
+* Rosbone DSP
+* Author: Mako
+* Version: 5.00s
+* Posted: May 20, 2026
 
-![Demo Image](docs/mmd_demo_0420s.png)
+![Demo Image](docs/mmd_demo_0500s.png)
 
 VERSION
 ------------------------------------------------------------------
@@ -22,8 +24,15 @@ VERSION 4.20s
 * EXE and VST are compiled using STATIC lib.<br/>
 * 4x Over Sampling added for anti aliasing.<br/>  
 
+VERSION 5.00s
+* Complete rework of Parameter code.
+* Rework of MND file saving and loading. Not backwards compatible.
+* Rework of all modulation code. Sample Interpolation added.
+* Distortion pedals reworked. Are now OD and Distortion.
+* Rebranded as Mini D, all Mako references removed.
+
 NOTE:<br/>
-Version 4.20s files use the static runtime library option in JUCE.
+Versions 4.20s-5.00s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
@@ -42,20 +51,20 @@ WAVE files used in the VST will NOT BE AVAILABLE
 from within the DAW at startup or its presets. 
 
 In order to utilize external files in the VST a database must be used.
-MMD uses an external database to store Amplifier and Speaker IR paths
+MD uses an external database to store Amplifier and Speaker IR paths
 so they can easily be recalled from within a DAW.
 
 DATABASE OPERATION<br/>
-MMD has 20 built in amplifier models and 20 built in speaker IRs. <br/>
-MMD can access external amps and IRs if they are defined in the Amp/IR database. <br/>
+MD has 20 built in amplifier models and 20 built in speaker IRs. <br/>
+MD can access external amps and IRs if they are defined in the Amp/IR database. <br/>
 
 To edit the database, select the DEFINE AMPS or DEFINE IRS buttons on the main menu.
 When editing, simply left mouse click to add items or right click to delete items.
 Changes are automatically saved as you edit. Amps or IRs should be reselected if they
 were in use while editing.
 
-The Amps and Speaker IRs are referenced in the DAW and MMD by slot number only. Changing an amp in
-the database will change it in any DAW or MMD preset. 
+The Amps and Speaker IRs are referenced in the DAW and MD by slot number only. Changing an amp in
+the database will change it in any DAW or MD preset. 
 
 HINT: It is advised to rename the external files to the database slot they will be assigned.
 Numbering the files will greatly simplify use on multiple computers.<br/>
@@ -64,15 +73,15 @@ For example a v30 IR could be called 55_v30. When setting up the VST on another 
 be easy to organize the IRs, 55_v30 needs to be loaded into slot 55.
 
 
-MMD PRESETS<br/>
-In its normal use, the MMD VST should use the DAW preset save/load. When using
-the standalone EXE, MMD can load/save complete setups by selecting Load/Save
-preset buttons. It may be easier to use the MMD presets when sharing across multiple PCs.
+MD PRESETS<br/>
+In its normal use, the MD VST should use the DAW preset save/load. When using
+the standalone EXE, MD can load/save complete setups by selecting Load/Save
+preset buttons. It may be easier to use the MD presets when sharing across multiple PCs.
 
 
 SIGNAL PATH
 ------------------------------------------------------------------
-MMD has a fixed signal path. All audio moves from left to right from the signal path diagram.
+MD has a fixed signal path. All audio moves from left to right from the signal path diagram.
 Optionally, the Delay and Reverb blocks can be placed in parallel. The UI diagram will not
 be changed when in parallel.
 
@@ -90,7 +99,7 @@ resampling of the IR (Size).
 There are 20 programmed IRs built in to the VST. An additional 179 IRs can be added
 to the IR databse. IRs can be resampled using the SIZE control.
 
-As with the Amp database, an IR is referenced by its slot number in both MMD and the DAW.
+As with the Amp database, an IR is referenced by its slot number in both MD and the DAW.
 Changing an IR in the databse will change it everywhere it is referenced. Again, best
 practice would be to number the IR files with a slot number prefix.
 
@@ -101,7 +110,7 @@ To bypass the effect set its MIX value to 0 (zero).
 
 ON SCREEN CONTROL OPERATION
 ------------------------------------------------------------------
-There are two basic controls used for setting in MMD: Slider and knob.
+There are two basic controls used for setting in MD: Slider and knob.
 - Mouse click sets a value.
 - Most controls support dragging to adjust values. Try not to drag if issues arise.
 - Double Click will set the control to its default (Except Pedals and Mods).
@@ -142,7 +151,7 @@ Boom and Crisp are Hi/Lo cut filters to let you adjust the EQ going into the Amp
 Boom and Crisp are typical 1st order Low/High Cut filters.
 
 SLOPE<br/>
-MMD amps use two styles of clipping: Hard and Soft. The slope control mixes
+MD amps use two styles of clipping: Hard and Soft. The slope control mixes
 between the two types. Soft is best used for low gain and hard for high gain.
 
 THUMP, AIR, POWER, and THIN<br/>
@@ -185,7 +194,7 @@ volume while playing and increase it when not playing.
 
 REVERB BLOCK<br/>
 ------------------------------------------------------------------
-MMD has a very simplistic reverb based on 16 different delays being
+MD has a very simplistic reverb based on 16 different delays being
 mixed together. Reverbs 0-10 use a simpler algorithm and sound very
 delay-like. Reverbs 11-19 are denser and come closer to a normal reverb
 effect.
@@ -197,7 +206,7 @@ chorus applied to the wet effect helps smooth the echoes.
 
 EXTERNAL IMPULSE RESPONSES<br/>
 ------------------------------------------------------------------
-MMD uses 1024 sample IRs. The program does not try to parse out WAVE
+MD uses 1024 sample IRs. The program does not try to parse out WAVE
 files. It assumes the first 1024 samples are the correct IR data. It
 is best to verify the files in an external program before use. 
 
@@ -251,7 +260,7 @@ https://youtu.be/_Q6cssKVIU4?si=U1wIwvZPr2iH72xP
 ROOM EQ WIZARD - Sweeping your own amps 
 ------------------------------------------------------------------
 Room EQ Wizard is an amazing software package that lets you make frequency sweeps. It
-can be used to make amplifier and Speaker IRs for use in Mako Mini Distortion.
+can be used to make amplifier and Speaker IRs for use in Mini Distortion.
 
 The concept of making an Amp IR is:
 1) Set the amp to edge of distortion.
