@@ -4,8 +4,8 @@
 * Written in Visual C++ 2022.
 * Rosbone DSP
 * Author: Mako
-* Version: 5.00s
-* Posted: May 20, 2026
+* Version: 5.01s
+* Posted: May 27, 2026
 
 ![Demo Image](docs/mmd_demo_0500s.png)
 
