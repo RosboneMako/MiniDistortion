@@ -33,8 +33,13 @@ VERSION 5.00s
 * Color rework, all ON items are Green.
 * Rebranded as Mini D, all Mako references removed.
 
+VERSION 5.01s
+* Fixed Reverb not loading on MND preset.
+* Fixed Distortion 2 bug.
+* UI changes.
+
 NOTE:<br/>
-Versions 4.20s-5.00s files use the static runtime library option in JUCE.
+Versions 4.20s-5.01s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
