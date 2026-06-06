@@ -4,10 +4,10 @@
 * Written in Visual C++ 2022.
 * Rosbone DSP
 * Author: Mako
-* Version: 5.01s
-* Posted: May 27, 2026
+* Version: 5.02s
+* Posted: June 6, 2026
 
-![Demo Image](docs/mmd_demo_0500s.png)
+![Demo Image](docs/mmd_demo_0502s.png)
 
 VERSION
 ------------------------------------------------------------------
@@ -38,8 +38,14 @@ VERSION 5.01s
 * Fixed Distortion 2 bug.
 * UI changes.
 
+VERSION 5.02s
+* Fixed 4xOS in Distortion 2 bug.
+* Updated each block to have its own feel.
+* Bedazzled knobs using fixed images.
+* Reworked Distortion 2 to get more adjustment.
+
 NOTE:<br/>
-Versions 4.20s-5.01s files use the static runtime library option in JUCE.
+Versions 4.20s-5.02s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
