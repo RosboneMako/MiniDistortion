@@ -4,8 +4,8 @@
 * Written in Visual C++ 2022.
 * Rosbone DSP
 * Author: Mako
-* Version: 5.02s
-* Posted: June 6, 2026
+* Version: 5.03s
+* Posted: June 11, 2026
 
 ![Demo Image](docs/mmd_demo_0502s.png)
 
@@ -44,8 +44,15 @@ VERSION 5.02s
 * Bedazzled knobs using fixed images.
 * Reworked Distortion 2 to get more adjustment.
 
+VERSION 5.03s
+* Added AIR frequency adjustment to dial in crispness better.
+* Reworked included presets for new AIR frequency.
+* Minor button tweaks.
+* Swapped Matches amp for DLX.
+
+
 NOTE:<br/>
-Versions 4.20s-5.02s files use the static runtime library option in JUCE.
+Versions 4.20s-5.03s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
