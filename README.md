@@ -56,8 +56,8 @@ VERSION 5.04s
 
 VERSION 5.05s
 * Added Comp Trig bandpass filter to focus triggering more on a certain band.
+* Added time between IR selection and UI update for propagation.
 * Fixed bug when editing Amps/IRs then unloading the editor (losing focus).
-
 
 NOTE:<br/>
 Versions 4.20s-5.05s files use the static runtime library option in JUCE.
