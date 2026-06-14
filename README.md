@@ -4,8 +4,8 @@
 * Written in Visual C++ 2022.
 * Rosbone DSP
 * Author: Mako
-* Version: 5.04s
-* Posted: June 12, 2026
+* Version: 5.05s
+* Posted: June 13, 2026
 
 ![Demo Image](docs/mmd_demo_0503s.png)
 
@@ -54,9 +54,13 @@ VERSION 5.04s
 * Added AIR filter to soften aliasing.
 * Fixed bug loading Rev 4 preset files.
 
+VERSION 5.05s
+* Added Comp Trig bandpass filter to focus triggering more on a certain band.
+* Fixed bug when editing Amps/IRs then unloading the editor (losing focus).
+
 
 NOTE:<br/>
-Versions 4.20s-5.04s files use the static runtime library option in JUCE.
+Versions 4.20s-5.05s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
