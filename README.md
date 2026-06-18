@@ -4,8 +4,8 @@
 * Written in Visual C++ 2022.
 * Rosbone DSP
 * Author: Mako
-* Version: 5.05s
-* Posted: June 13, 2026
+* Version: 5.06s
+* Posted: June 18, 2026
 
 ![Demo Image](docs/mmd_demo_0503s.png)
 
@@ -59,8 +59,15 @@ VERSION 5.05s
 * Added time between IR selection and UI update for propagation.
 * Fixed bug when editing Amps/IRs then unloading the editor (losing focus).
 
+VERSION 5.06s
+* Added Compressor and Clean signal mix.
+* Fixed bug loading Rev 4 preset files.
+* Added Regen control to Flanger.
+* Adjusted small colored glass controls for speed.
+* Tweaked parameter setup change code. 
+
 NOTE:<br/>
-Versions 4.20s-5.05s files use the static runtime library option in JUCE.
+Versions 4.20s-5.06s files use the static runtime library option in JUCE.
 Previous versions used dynamic linking and may not run in certain instances.
 An s is added to the version number for identification. 
 
