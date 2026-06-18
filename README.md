@@ -63,6 +63,7 @@ VERSION 5.06s
 * Added Compressor and Clean signal mix.
 * Fixed bug loading Rev 4 preset files.
 * Added Regen control to Flanger.
+* Fixed bug in Flanger/Bronzer.
 * Adjusted small colored glass controls for speed.
 * Tweaked parameter setup change code. 
 
